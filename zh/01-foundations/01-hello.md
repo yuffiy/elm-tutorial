@@ -1,18 +1,18 @@
 # Hello World
 
-## Installing Elm
+## Elm 安装
 
-Go to http://elm-lang.org/install and download the appropriate installer for your system.
+可以在 http://elm-lang.org/install 下载到适合你操作系统的安装包。
 
-## Our first Elm application
+## 我们的第一个 Elm 程序
 
-Let's write our first Elm application. Create a folder for your application. In this folder run the following command in the terminal:
+让我们开始写我们的第一个 Elm 程序。首先创建一个文件夹，在这个文件夹下运行下面的命令：
 
 ```bash
 elm package install elm-lang/html
 ```
 
-This will install the _html_ module. Then add a `Hello.elm` file, with the following code:
+这样会安装一个 _html_ 模块。然后添加一个 `Hello.elm` 的文件，并填入下面的代码：
 
 ```elm
 module Hello exposing (..)
@@ -24,33 +24,33 @@ main =
     text "Hello"
 ```
 
-Go to this folder on the terminal and type:
+接着键入下面的命令：
 
 ```bash
 elm reactor
 ```
 
-This should show you:
+这时控制台会显示：
 
 ```
 elm reactor 0.17.0
 Listening on http://0.0.0.0:8000/
 ```
 
-Open `http://0.0.0.0:8000/` on a browser. And click on `Hello.elm`. You should see `Hello` on your browser.
+在浏览器中打开 `http://0.0.0.0:8000/`，单击 `Hello.elm` 就会看到 `Hello`。
 
-Let's review what is happening here:
+现在让我们来看一下代码：
 
-### imports
+### 导入
 
-In Elm you need to import the __modules__  you want to use explicitly. In this case we want to use the __Html__ module. 
+在 Elm 中，你需要明确的导入使用到的__模块__。这里我们需要用到 __Html__ 模块。
 
-This module has many functions to work with html. We will be using `.text` so we import this function into the current namespace by using `exposing`.
+这个模块包含了很多关于 html 的函数。这里我们用到了 `.text`，所以需要使用 `exposing` 来从当前模块中导入这个函数。
 
-### main
+### main 函数
 
-Front end applications in Elm start on a function called `main`. `main` is a function that returns an element to draw into the page. In this case it returns an Html element (created by using `text`).
+Elm 程序开始于一个叫做 `main`的函数。`main` 函数返回一个 element 并将他画在页面上。在这里我们返回了一个 Html 元素（由 `text` 函数创建）。
 
 ### elm reactor
 
-Elm __reactor__ creates a server that compiles Elm code on the fly. __reactor__ is useful for developing applications without worrying too much about setting up a build process. However __reactor__ has limitations, so we will need to switch to a build process later on.
+Elm __reactor__ 会创建一个 server 并编译 Elm 源码。__reactor__ 可以很方便的用于开发程序而不用担心繁琐的构建过程。然而，__reactor__ 能做的事情有限，最终我们还是需要切换到项目的构建上来。
